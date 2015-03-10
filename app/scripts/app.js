@@ -10,9 +10,12 @@ var app = angular.module('myapp', [
 
 // route provider
 app.config(function($routeProvider) {
-	$routeProvider.when('/', {
+	$routeProvider.when('/main', {
 		templateUrl: 'views/main.html',
 		controller: 'MainCtrl'
+	}).when('/', {
+		templateUrl: 'views/signup.html',
+		controller: 'SignupCtrl'
 	}).otherwise({
 		redirectTo: '/'
 	});
